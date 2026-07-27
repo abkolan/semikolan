@@ -1,0 +1,16 @@
+{{- /* Search index consumed by /search/ (assets/js/search.js). */ -}}
+{{- $pages := where site.RegularPages "Params.hidden" "!=" true -}}
+{{- $index := slice -}}
+{{- range $pages -}}
+  {{- $index = $index | append (dict
+      "title"       .Title
+      "url"         .RelPermalink
+      "section"     .Section
+      "date"        (.Date.Format "Jan 2, 2006")
+      "iso"         (.Date.Format "2006-01-02")
+      "description" (default "" .Description)
+      "tags"        (default (slice) .Params.tags)
+      "body"        (.Plain | htmlUnescape | chomp | truncate 2400 "")
+  ) -}}
+{{- end -}}
+{{- $index | jsonify (dict "indent" "") -}}

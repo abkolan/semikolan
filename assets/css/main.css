@@ -535,3 +535,26 @@
   .til-title a { color: var(--ink); text-decoration: none; }
   .til-title a:hover { text-decoration: underline; text-decoration-color: var(--clay); text-underline-offset: 0.18em; }
   .til-entry .til-body p { margin: 0.3rem 0 0; font-size: var(--fs-sm); color: var(--muted); }
+
+  /* ---------- search ---------- */
+  .search-box {
+    display: flex; align-items: center; gap: 0.6rem;
+    border: 1px solid var(--hair); border-radius: 10px;
+    background: var(--paper-sink); padding: 0 0.9rem;
+    margin: 0 0 var(--sp-3); transition: border-color .18s ease;
+  }
+  .search-box:focus-within { border-color: var(--clay); }
+  .search-box .search-glyph { width: 1.05rem; height: 1.05rem; color: var(--muted); flex: none; }
+  .search-box input {
+    appearance: none; border: 0; background: transparent; outline: none;
+    font-family: var(--serif); font-size: 1.1rem; color: var(--ink);
+    width: 100%; padding: 0.7rem 0; line-height: 1.4;
+  }
+  .search-box input::placeholder { color: var(--muted); }
+  .search-box input::-webkit-search-cancel-button { -webkit-appearance: none; }
+  .search-status {
+    font-family: var(--sans); font-size: var(--fs-2xs); text-transform: uppercase;
+    letter-spacing: 0.09em; color: var(--muted); margin: 0 0 var(--sp-3); min-height: 1em;
+  }
+  #search-results .entry.essay .hang { text-transform: uppercase; }
+  #search-results mark { background: var(--mark); }
