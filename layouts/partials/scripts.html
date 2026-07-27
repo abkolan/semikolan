@@ -109,3 +109,14 @@
   });
 </script>
 {{ end }}
+
+{{/* GoatCounter — cookieless page counts, production host only (skips local dev + previews) */}}
+<script>
+  if (location.hostname === "semikolan.me") {
+    var gc = document.createElement("script");
+    gc.async = true;
+    gc.src = "//gc.zgo.at/count.js";
+    gc.setAttribute("data-goatcounter", "https://semikolan.goatcounter.com/count");
+    document.body.appendChild(gc);
+  }
+</script>
