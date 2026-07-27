@@ -4,6 +4,17 @@ Personal site of **Abhilash Kolanthara** (**[semikolan.me](https://semikolan.me)
 
 Built with [Hugo](https://gohugo.io/) and a small, hand-built theme (no external theme dependency). Warm-paper + ink-indigo design system, light / dark / system themes, and a Markdown pipeline with a few custom conveniences (terminal blocks, callouts, copy buttons).
 
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/landing-light.png" alt="Landing page in light mode"></td>
+    <td width="50%"><img src="docs/screenshots/landing-dark.png" alt="Landing page in dark mode"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Landing · light</sub></td>
+    <td align="center"><sub>Landing · dark</sub></td>
+  </tr>
+</table>
+
 ## Stack
 
 - **Hugo** `0.146+` (extended edition **not** required; built and verified on `0.164.0`)
@@ -110,6 +121,32 @@ Body supports **Markdown**.
 **Math** — write MathML directly (Goldmark passthrough is enabled).
 
 Every code block gets a **copy button**, and footnote back-arrows get a tooltip. There's a live reference at **`/til/markdown-reference/`** exercising all of it.
+
+### Rendered examples
+
+Opt-in **terminal window** — mac chrome, copy button, and a `console` mode that highlights the prompt and dims output (always dark by design):
+
+<p><img src="docs/screenshots/terminal.png" width="620" alt="Terminal block showing a command and its output"></p>
+
+**Syntax-highlighted code** with a filename caption and line highlighting:
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/code-light.png" alt="Code block in light mode"></td>
+    <td width="50%"><img src="docs/screenshots/code-dark.png" alt="Code block in dark mode"></td>
+  </tr>
+  <tr><td align="center"><sub>light</sub></td><td align="center"><sub>dark</sub></td></tr>
+</table>
+
+**Callouts** — note / tip / warning:
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/callouts-light.png" alt="Callouts in light mode"></td>
+    <td width="50%"><img src="docs/screenshots/callouts-dark.png" alt="Callouts in dark mode"></td>
+  </tr>
+  <tr><td align="center"><sub>light</sub></td><td align="center"><sub>dark</sub></td></tr>
+</table>
 
 ## Design & theme
 
