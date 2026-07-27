@@ -485,11 +485,6 @@
   .page-sub { font-family: var(--serif); font-size: var(--fs-sm); color: var(--muted); margin: 0; }
 
   /* ---------- home ---------- */
-  .home-intro {
-    font-size: 1.15rem; line-height: 1.6; color: var(--ink-soft);
-    margin: var(--sp-4) 0 var(--sp-6); max-width: 34rem;
-  }
-  .home-intro strong { font-weight: 600; color: var(--ink); }
   .section-label {
     font-family: var(--serif); font-style: italic; font-size: var(--fs-sm);
     color: var(--muted); margin: 0 0 var(--sp-3);

@@ -1,6 +1,5 @@
 {{ define "main" }}
 <div class="frame home">
-  {{ with site.Params.intro }}<p class="home-intro">{{ . | safeHTML }}<span class="wm-cursor" aria-hidden="true"></span></p>{{ end }}
   <p class="section-label">Recent</p>
   <ul class="post-list">
     {{ range first 6 (where site.RegularPages "Section" "in" (slice "blog" "til")) }}

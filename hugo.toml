@@ -7,7 +7,6 @@ enableRobotsTXT = true
 [params]
   author = "Abhilash Kolanthara"
   description = "Notes on tech, AI, systems, and whatever's nagging at me."
-  intro = "I'm <strong>Abhilash Kolanthara</strong> — an engineer who writes to think. Notes on tech, AI, systems, and whatever's nagging at me."
   colophon = "Writing is thinking — and you grow by embarrassing yourself. So here's me doing exactly that, about tech, AI, and whatever's nagging at me."
   repo = "https://github.com/abkolan/semikolan.me"
 
