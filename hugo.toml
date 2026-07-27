@@ -1,5 +1,5 @@
 baseURL = "https://semikolan.me/"
-title = "semikolan.me"
+title = "semikolan"
 defaultContentLanguage = "en"
 enableGitInfo = true
 enableRobotsTXT = true
