@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="frame flow">
+  <p class="eyebrow">
+    <span>{{ .Section | title }}</span>
+    <span class="sep">;</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+    {{ with .ReadingTime }}<span class="sep">;</span><span>{{ . }} min read</span>{{ end }}
+  </p>
+  <h1 class="title">{{ .Title }} <a class="anchor" href="{{ .RelPermalink }}" aria-label="Copy link to this post">#</a></h1>
+  {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+
+  {{ .Content }}
+
+  {{ with .GetTerms "tags" }}
+  <div class="tags"><span class="lbl">filed under</span>{{ range . }}<a class="tag" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</div>
+  {{ end }}
+
+  <div class="eof">EOF</div>
+</article>
+{{ end }}

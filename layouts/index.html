@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="frame home">
+  {{ with site.Params.intro }}<p class="home-intro">{{ . | safeHTML }}<span class="wm-cursor" aria-hidden="true"></span></p>{{ end }}
+  <p class="section-label">Recent</p>
+  <ul class="post-list">
+    {{ range first 6 (where site.RegularPages "Section" "in" (slice "blog" "til")) }}
+      {{ if eq .Section "til" }}
+      <li class="entry til">
+        <span class="til-tag">TIL</span>
+        <div class="til-body">
+          <h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Description }}<p>{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{ else }}
+      <li class="entry essay">
+        <span class="hang">{{ .Date.Format "Jan 02" }}</span>
+        <h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Description }}<p class="entry-dek">{{ . }}</p>{{ end }}
+      </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+  <p class="more-link"><a href="{{ "/blog/" | relURL }}">All posts →</a></p>
+</div>
+{{ end }}

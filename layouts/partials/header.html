@@ -1,0 +1,28 @@
+<header class="site">
+  <div class="bar">
+    <a class="wordmark" href="{{ "/" | relURL }}">semi<span class="name">kolan</span><span class="semi">;</span><span class="wm-cursor" aria-hidden="true"></span></a>
+    <nav class="main" aria-label="Primary">
+      {{ range site.Menus.main -}}
+        {{ $url := .URL }}{{ with .Page }}{{ $url = .RelPermalink }}{{ end }}
+        <a href="{{ $url }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+      <span class="nav-utils">
+        <a class="nav-icon" href="{{ "/search/" | relURL }}" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20.5 20.5l-4.2-4.2"></path></svg>
+        </a>
+        <a class="nav-icon" href="{{ with .OutputFormats.Get "rss" }}{{ .RelPermalink }}{{ else }}{{ "/index.xml" | relURL }}{{ end }}" aria-label="RSS feed">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1.4" fill="currentColor" stroke="none"></circle></svg>
+        </a>
+        <button class="nav-icon toggle" id="themeToggle" type="button" aria-label="Toggle dark theme" aria-pressed="false">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path>
+          </svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+          </svg>
+        </button>
+      </span>
+    </nav>
+  </div>
+</header>

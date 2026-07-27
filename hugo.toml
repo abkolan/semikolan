@@ -1,45 +1,62 @@
 baseURL = "https://semikolan.me/"
-languageCode = "en-us"
 title = "semikolan.me"
-theme = "zen"
+defaultContentLanguage = "en"
+enableGitInfo = true
+enableRobotsTXT = true
 
 [params]
-  description = "Notes, links, and thoughts from a curious engineer."
-  sidebar = true
-  mobileMenu = true
-  submitted = true
-  logo = false
-  feedlinks = true
-  poweredby = true
-  footer = "This site is licensed under a [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license."
+  author = "Abhilash Kolanthara"
+  description = "Notes on tech, AI, systems, and whatever's nagging at me."
+  intro = "I'm <strong>Abhilash Kolanthara</strong> — an engineer who writes to think. Notes on tech, AI, systems, and whatever's nagging at me."
+  colophon = "Writing is thinking — and you grow by embarrassing yourself. So here's me doing exactly that, about tech, AI, and whatever's nagging at me."
+  repo = "https://github.com/abkolan/semikolan.me"
+
+[taxonomies]
+  tag = "tags"
 
 [menu]
   [[menu.main]]
     name = "Blog"
-    url = "/blog"
+    pageRef = "/blog"
     weight = 1
   [[menu.main]]
-    name = "TIL"
-    url = "/til"
+    name = "Projects"
+    pageRef = "/projects"
     weight = 2
   [[menu.main]]
-    name = "Misc"
-    url = "/misc"
+    name = "TIL"
+    pageRef = "/til"
     weight = 3
   [[menu.main]]
     name = "About"
-    url = "/about"
+    pageRef = "/about"
     weight = 4
 
-[outputs]
-  home = ["HTML", "RSS", "JSON", "SearchIndex"]
-  section = ["HTML", "RSS", "JSON"]
-  taxonomy = ["HTML", "RSS"]
-  term = ["HTML", "RSS"]
-
-[outputFormats]
-  [outputFormats.SearchIndex]
-    mediaType = "application/json"
-    baseName = "search_index"
-    isPlainText = true
-    notAlternative = true
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.extensions]
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['$$', '$$'], ['\[', '\]']]
+        inline = [['$', '$'], ['\(', '\)']]
+    [markup.goldmark.extensions.extras]
+      [markup.goldmark.extensions.extras.delete]
+        enable = true
+      [markup.goldmark.extensions.extras.insert]
+        enable = true
+      [markup.goldmark.extensions.extras.mark]
+        enable = true
+      [markup.goldmark.extensions.extras.subscript]
+        enable = true
+      [markup.goldmark.extensions.extras.superscript]
+        enable = true
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    tabWidth = 4
+    wrapperClass = "chroma"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
