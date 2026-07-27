@@ -583,7 +583,7 @@
   .foot-colophon a:hover { text-decoration-color: var(--clay); }
   .foot-meta { font-size: var(--fs-xs); color: var(--muted); margin: 0; }
   .copyleft { display: inline-block; transform: scaleX(-1); }  /* mirrored © = copyleft mark, always renders */
-  .foot-meta a.build { font-family: var(--mono); color: var(--muted); text-decoration: none; }
+  .foot-meta .build { font-family: var(--mono); color: var(--muted); text-decoration: none; }
   .foot-meta a.build:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--clay); text-underline-offset: 0.18em; }
 
   /* ---------- multi-view router ---------- */

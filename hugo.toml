@@ -62,3 +62,8 @@ capitalizeListTitles = false
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 3
+
+# Allow reading Cloudflare Pages build env vars (e.g. CF_PAGES_COMMIT_SHA) in templates.
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$', '^CF_PAGES_']
