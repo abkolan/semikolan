@@ -10,10 +10,12 @@
 
   {{ .Content }}
 
+  <hr class="post-end">
+
+  <div class="eof">EOF</div>
+
   {{ with .GetTerms "tags" }}
   <div class="tags"><span class="lbl">filed under</span>{{ range . }}<a class="tag" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</div>
   {{ end }}
-
-  <div class="eof">EOF</div>
 </article>
 {{ end }}

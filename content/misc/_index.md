@@ -1,4 +1,0 @@
----
-title: "Misc"
-description: "Everything else."
----

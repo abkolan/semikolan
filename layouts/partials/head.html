@@ -3,6 +3,32 @@
 <meta name="color-scheme" content="light dark">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* favicons + icons */}}
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+
+{{/* mobile browser UI color — matches the header band, per theme */}}
+<meta name="theme-color" content="#f2efe7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#211f1b" media="(prefers-color-scheme: dark)">
+
+{{/* social link previews */}}
+{{ $ogTitle := cond .IsHome site.Title .Title }}
+{{ $ogDesc := or .Description site.Params.description }}
+{{ $ogImage := "og-image.png" | absURL }}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:description" content="{{ $ogDesc }}">
+<meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $ogImage }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $ogTitle }}">
+<meta name="twitter:description" content="{{ $ogDesc }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
 
 {{ $css := resources.Get "css/main.css" | resources.Minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

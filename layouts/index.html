@@ -1,25 +1,26 @@
 {{ define "main" }}
 <div class="frame home">
-  <p class="section-label">Recent</p>
+  <p class="section-label">Posts</p>
   <ul class="post-list">
-    {{ range first 6 (where site.RegularPages "Section" "in" (slice "blog" "til")) }}
-      {{ if eq .Section "til" }}
-      <li class="entry til">
-        <span class="til-tag">TIL</span>
-        <div class="til-body">
-          <h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          {{ with .Description }}<p>{{ . }}</p>{{ end }}
-        </div>
-      </li>
-      {{ else }}
-      <li class="entry essay">
-        <span class="hang">{{ .Date.Format "Jan 02" }}</span>
-        <h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ with .Description }}<p class="entry-dek">{{ . }}</p>{{ end }}
-      </li>
-      {{ end }}
+    {{ range first 3 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+    <li class="entry essay">
+      <span class="hang">{{ .Date.Format "Jan 02" }}</span>
+      <h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Description }}<p class="entry-dek">{{ . }}</p>{{ end }}
+    </li>
     {{ end }}
   </ul>
   <p class="more-link"><a href="{{ "/blog/" | relURL }}">All posts →</a></p>
+
+  <p class="section-label">TIL</p>
+  <ul class="home-tils">
+    {{ range first 6 (where site.RegularPages "Section" "til").ByDate.Reverse }}
+    <li>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02" }}</time>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  <p class="more-link"><a href="{{ "/til/" | relURL }}">All TILs →</a></p>
 </div>
 {{ end }}

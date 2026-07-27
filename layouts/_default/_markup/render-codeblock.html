@@ -1,0 +1,21 @@
+{{- $lang := .Type | default "text" -}}
+{{- if eq $lang "mermaid" -}}
+<pre class="mermaid">{{ .Inner | htmlEscape | safeHTML }}</pre>
+{{- else -}}
+  {{- $optstr := "lineNos=false" -}}
+  {{- with or .Options.hl_lines .Attributes.hl_lines }}{{ $optstr = printf "%s,hl_lines=%s" $optstr . }}{{ end -}}
+  {{- $code := highlight (strings.TrimRight "\n" .Inner) $lang $optstr -}}
+  {{- if .Attributes.term -}}
+    {{- $shellish := slice "bash" "sh" "shell" "zsh" "console" "shell-session" "shellsession" "fish" -}}
+    {{- $title := or .Attributes.title .Options.title -}}
+    {{- if not $title }}{{ $title = cond (in $shellish $lang) "bash" $lang }}{{ end -}}
+<figure class="code term">
+  <figcaption class="term-bar"><span class="dots" aria-hidden="true"><span></span><span></span><span></span></span><span class="term-title">{{ $title }}</span></figcaption>
+  {{ $code }}
+</figure>
+  {{- else if .Attributes.file -}}
+<figure class="code"><figcaption>{{ .Attributes.file }}</figcaption>{{ $code }}</figure>
+  {{- else -}}
+{{ $code }}
+  {{- end -}}
+{{- end -}}

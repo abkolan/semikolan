@@ -3,11 +3,11 @@ title = "semikolan.me"
 defaultContentLanguage = "en"
 enableGitInfo = true
 enableRobotsTXT = true
+capitalizeListTitles = false
 
 [params]
   author = "Abhilash Kolanthara"
   description = "Notes on tech, AI, systems, and whatever's nagging at me."
-  colophon = "Writing is thinking — and you grow by embarrassing yourself. So here's me doing exactly that, about tech, AI, and whatever's nagging at me."
   repo = "https://github.com/abkolan/semikolan.me"
 
 [taxonomies]

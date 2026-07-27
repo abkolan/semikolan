@@ -1,6 +1,6 @@
 <footer class="site">
   <div class="foot">
     {{ with site.Params.colophon }}<p class="foot-colophon">{{ . | safeHTML }}</p>{{ end }}
-    <p class="foot-meta">© {{ now.Year }} {{ site.Title }} · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a> · built with Hugo{{ with site.Home.GitInfo }} · <a class="build" href="{{ site.Params.repo }}/commit/{{ .Hash }}">{{ .AbbreviatedHash }}</a>{{ end }}</p>
+    <p class="foot-meta"><span class="copyleft" role="img" aria-label="Copyleft">©</span> {{ now.Year }} <a href="https://semikolan.me">{{ site.Title }}</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a> · built with <a href="https://gohugo.io">Hugo</a>{{ with site.Home.GitInfo }} · <a class="build" href="{{ site.Params.repo }}/commit/{{ .Hash }}">{{ .AbbreviatedHash }}</a>{{ end }}</p>
   </div>
 </footer>
