@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="frame">
+  <header class="page-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-sub">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ with .Content }}<div class="flow">{{ . }}</div>{{ end }}
+
+  <ul class="til-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <li class="til-entry">
+      <span class="til-date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02" }}</time></span>
+      <div class="til-body">
+        <h2 class="til-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

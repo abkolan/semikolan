@@ -2,10 +2,14 @@
 title: "About"
 ---
 
-Hi, I'm the person behind semikolan.me. I'm a software engineer interested in distributed systems, developer tooling, and building things that last.
+I'm Abhilash Kolanthara — an engineer working on backend systems and developer tools. I like fast, boring code, careful measurement, and the moment a gnarly bug finally makes sense.
 
-This site is where I collect thoughts that are too long for a chat message and too short for a proper article. If something here is useful to you, that's a bonus.
+This site is where I think out loud. A wise man once told me that writing is a form of thinking, and that you only grow by embarrassing yourself in public — so this is me doing exactly that, one post at a time.
 
-You can find me on GitHub or reach out via email. I'm not particularly active on social media.
+Two pages I keep current: what I'm [reading](/reading-list/) and the [tools I use](/tools-i-use/) day to day.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+## Elsewhere
+
+- [GitHub](https://github.com/abkolan) — code, half-finished experiments
+- [Mastodon](https://example.com) — shorter thoughts
+- [Email](mailto:ab.kolan@gmail.com) — say hello

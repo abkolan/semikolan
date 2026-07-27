@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="frame">
+  <header class="page-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-sub">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ with .Content }}<div class="flow">{{ . }}</div>{{ end }}
+
+  {{ range .Pages.GroupByDate "2006" }}
+  <p class="year-label">{{ .Key }}</p>
+  <ul class="post-list">
+    {{ range .Pages }}
+    <li class="entry essay">
+      <span class="hang">{{ .Date.Format "Jan 02" }}</span>
+      <h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Description }}<p class="entry-dek">{{ . }}</p>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+{{ end }}

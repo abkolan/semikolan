@@ -1,0 +1,49 @@
+{{ define "main" }}
+<div class="frame">
+  <header class="page-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-sub">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ with .Content }}<div class="flow">{{ . }}</div>{{ end }}
+
+  {{/* Projects come from front-matter `projects` list; fall back to child pages. */}}
+  {{ with .Params.projects }}
+  <ul class="project-list">
+    {{ range . }}
+    <li class="project">
+      <div class="project-head">
+        <h2 class="project-title">
+          {{ if .href }}<a href="{{ .href }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+        </h2>
+        <span class="project-links">
+          {{ with .href }}<a href="{{ . }}">live</a>{{ end }}
+          {{ with .repo }}<a href="{{ . }}">source</a>{{ end }}
+          {{ with .year }}<span class="project-year">{{ . }}</span>{{ end }}
+        </span>
+      </div>
+      {{ with .desc }}<p class="project-desc">{{ . }}</p>{{ end }}
+      {{ with .tech }}
+      <p class="project-tech">{{ range . }}<span>{{ . }}</span>{{ end }}</p>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+    {{ with .Pages }}
+    <ul class="project-list">
+      {{ range . }}
+      <li class="project">
+        <div class="project-head">
+          <h2 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        </div>
+        {{ with .Description }}<p class="project-desc">{{ . }}</p>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+    {{ else }}
+    <p class="section-label">Nothing here yet — check back soon.</p>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}
