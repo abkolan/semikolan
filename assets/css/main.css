@@ -653,12 +653,18 @@
   .project-links { display: flex; gap: 0.9rem; flex: none; font-family: var(--serif); font-size: var(--fs-sm); }
   .project-links a { color: var(--muted); text-decoration: none; }
   .project-links a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--clay); text-underline-offset: 0.18em; }
+  /* Small appended ↗ — sized like .entry.link .out, not title-weight serif */
   .project-title a .ext,
   .project-links a .ext {
-    margin-left: 0.3em;
+    display: inline-block;
+    margin-left: 0.35em;
+    font-family: var(--sans);
+    font-size: var(--fs-2xs);
     font-style: normal;
     font-weight: 400;
+    line-height: 1;
     color: var(--muted);
+    vertical-align: 0.15em;
   }
   .visually-hidden {
     position: absolute;
