@@ -14,11 +14,13 @@
     <li class="project">
       <div class="project-head">
         <h2 class="project-title">
-          {{ if .href }}<a href="{{ .href }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+          {{ if .href }}
+          <a href="{{ .href }}" target="_blank" rel="noopener noreferrer">{{ .name }}<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
+          {{ else }}{{ .name }}{{ end }}
         </h2>
         <span class="project-links">
-          {{ with .href }}<a href="{{ . }}">live</a>{{ end }}
-          {{ with .repo }}<a href="{{ . }}">source</a>{{ end }}
+          {{ with .href }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">live<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>{{ end }}
+          {{ with .repo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">source<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>{{ end }}
           {{ with .year }}<span class="project-year">{{ . }}</span>{{ end }}
         </span>
       </div>
