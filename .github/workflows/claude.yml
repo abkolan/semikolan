@@ -35,3 +35,9 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+
+          # Proofreading checklist credit: Simon Willison
+          # https://simonwillison.net/guides/agentic-engineering-patterns/prompts/changes/
+          claude_args: |
+            --model claude-sonnet-5
+            --append-system-prompt "When this PR changes markdown blog posts under content/**/*.md, also proofread the prose using this checklist (credit: Simon Willison, https://simonwillison.net/guides/agentic-engineering-patterns/prompts/changes/): 1) Identify spelling mistakes and typos. 2) Identify grammar mistakes. 3) Watch out for repeated terms like 'It was interesting that X, and it was interesting that Y'. 4) Spot any logical errors or factual mistakes. 5) Highlight weak arguments that could be strengthened. 6) Make sure there are no empty or placeholder links."
