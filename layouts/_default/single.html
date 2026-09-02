@@ -8,11 +8,25 @@
   <h1 class="title">{{ .Title }} <a class="anchor" href="{{ .RelPermalink }}" aria-label="Copy link to this post">#</a></h1>
   {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
 
-  {{ .Content }}
+  {{/* Hugo appends footnotes to the end of .Content; split the trailing block out
+       so the EOF marker can sit between the body and the notes (issue #10). The
+       pattern is anchored to goldmark's exact markup — if it ever drifts, the page
+       falls back to rendering .Content unchanged. */}}
+  {{ $body := .Content }}
+  {{ $footnotes := "" }}
+  {{ $match := findRE `(?s)<div class="footnotes" role="doc-endnotes">.*</ol>\n</div>\s*$` $body 1 }}
+  {{ if $match }}
+    {{ $footnotes = index $match 0 }}
+    {{ $body = strings.TrimSuffix $footnotes $body }}
+  {{ end }}
+
+  {{ $body | safeHTML }}
 
   <hr class="post-end">
 
   <div class="eof">EOF</div>
+
+  {{ with $footnotes }}{{ . | safeHTML }}{{ end }}
 
   {{ with .GetTerms "tags" }}
   <div class="tags"><span class="lbl">filed under</span>{{ range . }}<a class="tag" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</div>
