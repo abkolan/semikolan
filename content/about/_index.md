@@ -13,7 +13,8 @@ Two pages I keep (mostly) current: what I'm [reading](/reading-list/) and the [t
 ## Why "semikolan"?
 
 It's a pun on my surname, not a reference to
-[Project Semicolon](https://projectsemicolon.com/), the mental health and
+<a href="https://projectsemicolon.com/" target="_blank"
+rel="noopener noreferrer">Project Semicolon</a>, the mental health and
 suicide prevention movement, though it's a cause worth knowing about.
 If that's what you were looking for, that link will take you there.
 
@@ -21,5 +22,5 @@ If that's what you were looking for, that link will take you there.
 
 - [GitHub](https://github.com/abkolan): code, half-finished experiments, and side projects
 - [Email](mailto:ab@semikolan.dev): shoot an async hello
-- [X](https://x.com/abkolan): musings; opinions are my own
+- [ X ](https://x.com/abkolan): musings; opinions are my own
 - [LinkedIn](https://www.linkedin.com/in/akolanthara/): professional stuff
