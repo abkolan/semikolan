@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-I'm Abhilash Kolanthara, AB for short. I've been an engineer for more than 20 years now. In my day job I manage and lead multiple engineering teams; otherwise I like cricket (especially Test cricket), retro games, and coffee.
+I'm **Abhilash Kolanthara**, AB for short. I've been an engineer for more than 20 years now. In my day job I manage and lead multiple engineering teams; otherwise I like cricket (especially Test cricket), retro games, and coffee.
 
 This is where I think out loud and publish my sometimes half-baked drafts. A wise man once told me that writing is a form of thinking, and that you only grow by embarrassing yourself in public, so this is me doing exactly that, one post at a time.
 
