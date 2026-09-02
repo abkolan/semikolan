@@ -19,10 +19,10 @@ projects:
     repo: "https://github.com/abkolan/pgqueue"
     tech: ["Go", "Postgres"]
     year: "2025"
-  - name: "semikolan.me"
+  - name: "semikolan.dev"
     desc: "This site — a hand-built Hugo theme, because I couldn't find one I liked."
-    href: "https://semikolan.me"
-    repo: "https://github.com/abkolan/semikolan.me"
+    href: "https://semikolan.dev"
+    repo: "https://github.com/abkolan/semikolan"
     tech: ["Hugo", "Go templates", "CSS"]
     year: "2026"
 ---

@@ -1,4 +1,4 @@
-baseURL = "https://semikolan.me/"
+baseURL = "https://semikolan.dev/"
 title = "semikolan"
 defaultContentLanguage = "en"
 enableGitInfo = true
@@ -8,7 +8,7 @@ capitalizeListTitles = false
 [params]
   author = "Abhilash Kolanthara"
   description = "Notes on tech, AI, systems, and whatever's nagging at me."
-  repo = "https://github.com/abkolan/semikolan.me"
+  repo = "https://github.com/abkolan/semikolan"
 
 [taxonomies]
   tag = "tags"

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal website (`semikolan.me`) built with [Hugo](https://gohugo.io/) using a small, hand-built **first-party theme** — there is no external theme dependency. Layouts live in `layouts/` and styles in a single-file design system at `assets/css/main.css`. Hugo version 0.146.0+ is required (extended version not needed; built and verified on 0.164.0). See `README.md` for a fuller tour of the theme, Markdown features, and deployment.
+This is a personal website (`semikolan.dev`) built with [Hugo](https://gohugo.io/) using a small, hand-built **first-party theme** — there is no external theme dependency. Layouts live in `layouts/` and styles in a single-file design system at `assets/css/main.css`. Hugo version 0.146.0+ is required (extended version not needed; built and verified on 0.164.0). See `README.md` for a fuller tour of the theme, Markdown features, and deployment.
 
 ## Common Commands
 

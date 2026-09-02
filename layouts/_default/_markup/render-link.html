@@ -1,0 +1,9 @@
+{{- /* Links in Markdown content. External destinations open in a new tab and get
+       the small ↗ marker used on the projects page; internal links, in-page
+       anchors, mailto: and tel: render plainly. */ -}}
+{{- $dest := urls.Parse .Destination -}}
+{{- $external := and $dest.Host (ne $dest.Host (urls.Parse site.BaseURL).Host) -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}
+  {{- if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text }}
+  {{- if $external }}<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span>{{ end -}}
+</a>
