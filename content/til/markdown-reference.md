@@ -175,8 +175,8 @@ flowchart LR
 <hr>
 <p>…and the writing picks back up on the other side.</p>
 
-<div class="footnotes">
-  <ol>
-    <li id="fn1">Footnotes render at the foot of the article, linked both ways. <a href="#" class="backref" aria-label="Back to content">↩</a></li>
-  </ol>
-</div>
+<p class="grouplabel">Footnotes</p>
+
+A claim that deserves a citation gets one[^1] — the marker links down to the note, and the note links back.
+
+[^1]: Footnotes render at the foot of the article, below the EOF marker, linked both ways.
