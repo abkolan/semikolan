@@ -1,6 +1,6 @@
 # semikolan
 
-Personal site of **Abhilash Kolanthara** (**[semikolan.me](https://semikolan.me)**) — notes on tech, AI, systems, and whatever's nagging at me.
+Personal site of **Abhilash Kolanthara** (**[semikolan.dev](https://semikolan.dev)**) — notes on tech, AI, systems, and whatever's nagging at me.
 
 Built with [Hugo](https://gohugo.io/) and a small, hand-built theme (no external theme dependency). Warm-paper + ink-indigo design system, light / dark / system themes, and a Markdown pipeline with a few custom conveniences (terminal blocks, callouts, copy buttons).
 
