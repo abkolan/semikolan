@@ -8,6 +8,6 @@
   ],
   "theme_color": "#3b4f7a",
   "background_color": "#faf9f5",
-  "display": "standalone",
+  "display": "browser",
   "start_url": "/"
 }
