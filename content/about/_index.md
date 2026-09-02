@@ -22,5 +22,5 @@ If that's what you were looking for, that link will take you there.
 
 - [GitHub](https://github.com/abkolan): code, half-finished experiments, and side projects
 - [Email](mailto:ab@semikolan.dev): shoot an async hello
-- [X](https://x.com/abkolan): musings; opinions are my own
+- [ X ](https://x.com/abkolan): musings; opinions are my own
 - [LinkedIn](https://www.linkedin.com/in/akolanthara/): professional stuff
