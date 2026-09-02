@@ -1,4 +1,4 @@
-/* semikolan.me — client-side search over /index.json. No dependencies. */
+/* semikolan.dev — client-side search over /index.json. No dependencies. */
 (function () {
   "use strict";
 

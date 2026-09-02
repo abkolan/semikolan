@@ -1,6 +1,6 @@
 <footer class="site">
   <div class="foot">
     {{ with site.Params.colophon }}<p class="foot-colophon">{{ . | safeHTML }}</p>{{ end }}
-    <p class="foot-meta"><span class="copyleft" role="img" aria-label="Copyleft">©</span> {{ now.Year }} <a href="https://semikolan.me">{{ site.Title }}</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a> · built with <a href="https://gohugo.io">Hugo</a> · {{ with os.Getenv "CF_PAGES_COMMIT_SHA" }}<a class="build" href="{{ site.Params.repo }}/commit/{{ . }}">{{ substr . 0 7 }}</a>{{ else }}<span class="build">dev</span>{{ end }}</p>
+    <p class="foot-meta"><span class="copyleft" role="img" aria-label="Copyleft">©</span> {{ now.Year }} <a href="https://semikolan.dev">{{ site.Title }}</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-SA 4.0<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a> · built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a> · {{ with os.Getenv "CF_PAGES_COMMIT_SHA" }}<a class="build" href="{{ site.Params.repo }}/commit/{{ . }}" target="_blank" rel="noopener noreferrer">{{ substr . 0 7 }}<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>{{ else }}<span class="build">dev</span>{{ end }}</p>
   </div>
 </footer>
