@@ -2,7 +2,7 @@
 title: "Games that end"
 description: "GTA 6? I'll take a retro game from the 90s thanks. On games with stopping points."
 date: 2026-09-02
-draft: true
+draft: false
 tags: ["gaming", "attention", "retro"]
 ---
 
